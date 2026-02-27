@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import { useAuth } from './context/AuthContext.jsx';
+import PrivateRoute from "./PrivateRoute.jsx";
 
 import TodoItem from './TodoItem.jsx'
 
