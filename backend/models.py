@@ -19,9 +19,7 @@ class TodoItem(db.Model):
             "id": self.id,
             "title": self.title,
             "done": self.done,
-            "comments": [
-                comment.to_dict() for comment in self.comments
-            ]
+            'comments': [comment.to_dict() for comment in self.comments]
         }
 
 class Comment(db.Model):
@@ -34,7 +32,7 @@ class Comment(db.Model):
         return {
             "id": self.id,
             "message": self.message,
-            "todo_id": self.todo_id
+            "todo_id": self.todo_id,
         }
         
 class User(db.Model):
