@@ -93,11 +93,6 @@ function TodoList({apiUrl}) {
       });
       if (response.ok) {
         await fetchTodoList();
-      } else {
-        // 🛑 เพิ่มบล็อก else ตรงนี้ เพื่อกระชากหน้ากาก Error ที่ซ่อนอยู่!
-        const errorData = await response.json();
-        console.error("เซฟไม่สำเร็จ! Status:", response.status, "เหตุผล:", errorData);
-        alert("ไม่สามารถเพิ่มคอมเมนต์ได้ ลองเช็ค Console (กด F12) ดูครับ");
       }
     } catch (error) {
       console.error("Error adding new comment:", error);
